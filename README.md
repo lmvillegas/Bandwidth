@@ -14,7 +14,8 @@ Para Realizar la instalacion desde GitHub es procedimiento es muy sencillo.
 Debes considerar tener instalador git en la maquina anfitrion 
 
 - Abrir un CMD desde C:\ 
-- ejecutar el comando git clone https://github.com/lmvillegas/Bandwidth.git
+- ejecutar el comando 
+    >git clone https://github.com/lmvillegas/Bandwidth.git
  
 Descargar los archivos en la carpeta BandWidth y ubicarlos en C:\Bandwidth
 .- Abrir Task Schelude e importar el Archivo Task_Scheduler_Log_speedTest.xml
