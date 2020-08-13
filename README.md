@@ -17,7 +17,7 @@ Debes considerar tener instalador git en la maquina anfitrion
 - ejecutar el comando 
     >git clone https://github.com/lmvillegas/Bandwidth.git
 
-#Importacion de la Tarea en Task Scheduler
+# Importacion de la Tarea en Task Scheduler
 
 Ya con esto tendras el software en tu maquina ahora solo falta crear la tarea en el **Task Schedule** 
 para que se ejecute con una frecuencia de 30 min.
@@ -33,4 +33,5 @@ Para el proceso de instalacion manual descargan el paquete en formato .zip
 - La ruta final del app debe ser C:\Bandwidth para que la importacion del Task Scheduler encaje perfectamente.
 
 Realizar las actividades de [importacion de la tarea en Task Scheduler]
+
 @lmvillegas :+1: está listo para ponerlo en Marcha! :shipit:
