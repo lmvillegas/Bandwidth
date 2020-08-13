@@ -2,7 +2,7 @@
 Script para el monitoreo de Bandwidth en un equipo
 
 
-__ Instalar python-3.8.5-amd64 en la laptop __
+** Instalar python-3.8.5-amd64 en la laptop **
 
 
 #.- instalar las depencias de Python 
