@@ -2,12 +2,12 @@
 Script para el monitoreo de Bandwidth en un equipo
 
 
-** Instalar python-3.8.5-amd64 en la laptop **
+***Instalar python-3.8.5-amd64 en la laptop***	
 
 
-**.- instalar las depencias de Python **
+***Instalar las depencias de Python***
 
-	> pip install pandas matplotlib web.py
+	>pip install pandas matplotlib web.py
 
 .- Descargar los archivos en la carpeta BandWidth y ubicarlos en C:\Bandwidth
 .- Abrir Task Schelude e importar el Archivo Task_Scheduler_Log_speedTest.xml
