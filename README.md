@@ -31,5 +31,5 @@ Para el proceso de instalacion manual descargan el paquete en formato .zip
 - copiar el contenido del directorio de Bandwidth en C:\
 - La ruta final del app debe ser C:\Bandwidth para que la importacion del Task Scheduler encaje perfectamente.
 
-
+Realizar las actividades de [importacion de la tarea en Task Scheduler]
 @lmvillegas :+1: está listo para ponerlo en Marcha! :shipit:
