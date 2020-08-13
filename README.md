@@ -18,6 +18,7 @@ Debes considerar tener instalador git en la maquina anfitrion
     >git clone https://github.com/lmvillegas/Bandwidth.git
 
 #Importacion de la Tarea en Task Scheduler
+
 Ya con esto tendras el software en tu maquina ahora solo falta crear la tarea en el **Task Schedule** 
 para que se ejecute con una frecuencia de 30 min.
 - Abrir el Task Scheduler desde el menu de actions encontraran un boton de import Task 
