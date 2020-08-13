@@ -9,7 +9,14 @@ Script para el monitoreo de Bandwidth en un equipo
 
 	>pip install pandas matplotlib web.py
 
-.- Descargar los archivos en la carpeta BandWidth y ubicarlos en C:\Bandwidth
+# Instalar la app desde git
+Para Realizar la instalacion desde GitHub es procedimiento es muy sencillo.
+Debes considerar tener instalador git en la maquina anfitrion 
+
+- Abrir un CMD desde C:\ 
+- ejecutar el comando git clone https://github.com/lmvillegas/Bandwidth.git
+ 
+Descargar los archivos en la carpeta BandWidth y ubicarlos en C:\Bandwidth
 .- Abrir Task Schelude e importar el Archivo Task_Scheduler_Log_speedTest.xml
 	esto creara una tarea programada que se ejecutara cada media hora lo que permira realizar el escaneo de net BandWidth en el equipo configurado
 .- una vez que se quieran ver los resultados es necesario ejecutar el server_to_web.py esto creara un servidor web ejecutandose desde http://localhost8080/bandwihtg donde se podran visualizar las graficas de las ulitimas 24 horas 
