@@ -127,9 +127,12 @@ venv.bak/
 
 # mypy
 .mypy_cache/
-.dmypy.json
-dmypy.json
 
+dmypy.json
+# .idea
+.idea
+.idea/*
 # Pyre type checker
+
 .pyre/
 >>>>>>> 5faf6315e2dfa1ba22d3feaf42ff85d47026988a
