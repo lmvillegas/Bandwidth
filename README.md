@@ -34,4 +34,4 @@ Para el proceso de instalacion manual descargan el paquete en formato .zip
 
 [Realizar las actividades de Importacion de la Tarea en Task Scheduler](#importacion-de-la-tarea-en-task-scheduler)
 
-@lmvillegas :+1: está listo para ponerlo en Marcha! :shipit:
+@lmvillegas :+1: estï¿½ listo para ponerlo en Marcha! :shipit:

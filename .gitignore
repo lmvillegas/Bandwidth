@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 __pycache__
 /nbproject/
 /nbproject/private/
@@ -135,4 +135,3 @@ dmypy.json
 # Pyre type checker
 
 .pyre/
->>>>>>> 5faf6315e2dfa1ba22d3feaf42ff85d47026988a

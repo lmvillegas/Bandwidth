@@ -15,7 +15,6 @@ def main():
         logging.info(err)
     else:
         logging.info("%5.1f %5.1f %5.1f", ping, download, upload)
-        # print(f"%5.1f %5.1f %5.1f", ping, download, upload)
 
 
 def setup_logging():
@@ -23,7 +22,7 @@ def setup_logging():
         filename=LOG_FILE,
         level=logging.INFO,
         format="%(asctime)s %(message)s",
-        datefmt="%Y-%m-%d %H:%M"
+        datefmt="%d-%m-%Y %H:%M"
     )
 
 
