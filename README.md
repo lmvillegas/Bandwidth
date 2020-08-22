@@ -7,7 +7,7 @@ Script para el monitoreo de Bandwidth en un equipo
 
 ***Instalar las depencias de Python***
 
-	>pip install pandas matplotlib web.py
+	>pip install pandas matplotlib web.py speedtest-cli
 
 # Instalar la app desde git
 Para Realizar la instalacion desde GitHub es procedimiento es muy sencillo.
