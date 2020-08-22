@@ -1,9 +1,9 @@
-#!/usr/bin/env python
-import os
+# Python program to test
+# internet speed
 import logging
+import speedtest
 
-DIR_APPDATA = os.getenv('APPDATA')
-SPEEDTEST_CMD = 'C:\\Users\\LuisVillegas\\AppData\\Roaming\\Python\\Python38\\Scripts\\speedtest.exe'
+SPEEDTEST = speedtest.Speedtest()
 LOG_FILE = 'speedtest.log'
 
 
@@ -15,6 +15,7 @@ def main():
         logging.info(err)
     else:
         logging.info("%5.1f %5.1f %5.1f", ping, download, upload)
+        # print(ping, download, upload)
 
 
 def setup_logging():
@@ -22,24 +23,19 @@ def setup_logging():
         filename=LOG_FILE,
         level=logging.INFO,
         format="%(asctime)s %(message)s",
-        datefmt="%d-%m-%Y %H:%M"
+        datefmt="%Y-%m-%d %H:%M",
     )
 
 
 def get_speedtest_results():
     """	Run test and parse results.
-        Returns tuple of ping speed, download speed, and upload speed,
-        or raises ValueError if unable to parse data."""
-    ping = download = upload = None
-    with os.popen(SPEEDTEST_CMD + ' --simple') as speedtest_output:
-        for line in speedtest_output:
-            label, value, unit = line.split()
-            if 'Ping' in label:
-                ping = float(value)
-            elif 'Download' in label:
-                download = float(value)
-            elif 'Upload' in label:
-                upload = float(value)
+            Returns tuple of ping speed, download speed, and upload speed,
+            or raises ValueError if unable to parse data."""
+    download = SPEEDTEST.download()
+    download = round(download / (10 ** 6), 2)
+    upload = SPEEDTEST.upload()
+    upload = round(upload / (10 ** 6), 2)
+    ping = SPEEDTEST.results.ping
 
     if all((ping, download, upload)):
         return ping, download, upload

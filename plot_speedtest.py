@@ -1,9 +1,14 @@
-#!/usr/bin/env python
-
 import os
 import matplotlib.pyplot as plt
-from matplotlib import dates, rcParams
 import pandas as pd
+from matplotlib import dates, rcParams
+
+
+HOSTNAME = os.getenv('COMPUTERNAME')
+TITLE = 'Ancho de Banda de ' + f'{HOSTNAME}'
+YLABEL = 'Ancho de Banda en MBps'
+XLABEL = "Ultimas 24 Horas"
+xrange = (0, 1, 2, 3, 4, 5)
 
 
 def main():
@@ -26,38 +31,33 @@ def read_data():
         parse_dates={'timestamp': [0, 1]},
         na_values=['TEST', 'FAILED'],
     )
-    print(df)
-    return df[-48:]  # return data for last 48 periods (i.e., 24 hours)
+
+    # print(df)
+    return df[-48:]
 
 
 def make_plot_file_last_24(last_24, file_plot_name):
     rcParams['xtick.labelsize'] = 'xx-small'
-
     plt.plot(last_24['timestamp'], last_24['download'], 'b-')
-    plt.title('Ancho de Banda de Casamar Apart 66-B')
-    plt.ylabel('Ancho de Banda en MBps')
-    xrange = (0, 1, 2, 3, 4, 5)
+    plt.title(f'{TITLE}')
+    plt.ylabel(f'{YLABEL}')
     plt.yticks(xrange)
     plt.ylim(0.0, 5.0)
-    plt.xlabel('Fecha/Hora')
-    plt.xticks(rotation='90')
+    plt.xlabel(f'{XLABEL}')
+    plt.xticks(rotation='45')
     plt.grid()
+    # plt.show()
 
     current_axes = plt.gca()
     current_figure = plt.gcf()
 
-    # hfmt = dates.DateFormatter('%m-%d %H:%M')
-    # current_axes.xaxis.set_major_formatter(hfmt)
-    # current_figure.subplots_adjust(bottom=.35)
+    hfmt = dates.DateFormatter('%m/%d %H:%M')
+    current_axes.xaxis.set_major_formatter(hfmt)
+    current_figure.subplots_adjust(bottom = .25)
 
-    current_axes.xaxis.set_major_locator(dates.DayLocator(interval=1))
-    current_axes.xaxis.set_major_formatter(dates.DateFormatter('%d-%m %H:%M'))
-    # locator = dates.MinuteLocator(interval=30)
-    # locator.MAXTICKS = 5000
-    # current_axes.xaxis.set_minor_locator(locator)
-
-    # datemin = pd.datetime()
-    # current_axes.set_xlim(datemin)
+    loc = current_axes.xaxis.get_major_locator()
+    loc.maxticks[dates.HOURLY] = 24
+    loc.maxticks[dates.MINUTELY] = 60
 
     current_figure.savefig(file_plot_name)
 
