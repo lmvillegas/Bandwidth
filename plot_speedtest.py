@@ -8,7 +8,7 @@ HOSTNAME = os.getenv('COMPUTERNAME')
 TITLE = 'Ancho de Banda de ' + f'{HOSTNAME}'
 YLABEL = 'Ancho de Banda en MBps'
 XLABEL = "Ultimas 24 Horas"
-xrange = (0, 1, 2, 3, 4, 5)
+xrange = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
 LOG_FILE = (f'speedtest-{HOSTNAME}.log')
 
 
@@ -43,7 +43,7 @@ def make_plot_file_last_24(last_24, file_plot_name):
     plt.title(f'{TITLE}')
     plt.ylabel(f'{YLABEL}')
     plt.yticks(xrange)
-    plt.ylim(0.0, 5.0)
+    plt.ylim(0.0, 10.0)
     plt.xlabel(f'{XLABEL}')
     plt.xticks(rotation='45')
     plt.grid()
