@@ -9,6 +9,7 @@ TITLE = 'Ancho de Banda de ' + f'{HOSTNAME}'
 YLABEL = 'Ancho de Banda en MBps'
 XLABEL = "Ultimas 24 Horas"
 xrange = (0, 1, 2, 3, 4, 5)
+LOG_FILE = (f'speedtest-{HOSTNAME}.log')
 
 
 def main():
@@ -24,7 +25,7 @@ def create_plot(plot_file_name):
 
 def read_data():
     df = pd.io.parsers.read_csv(
-        'speedtest.log',
+        LOG_FILE,
         names='date time ping download upload'.split(),
         header=None,
         sep=r'\s+',

@@ -1,11 +1,13 @@
 #!/usr/bin/python
 # Python program to test
 # internet speed
+import os
 import logging
 import speedtest
 
+HOSTNAME = os.getenv('COMPUTERNAME')
 SPEEDTEST = speedtest.Speedtest()
-LOG_FILE = 'speedtest.log'
+LOG_FILE = (f'speedtest-{HOSTNAME}.log')
 
 
 def main():

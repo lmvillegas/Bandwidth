@@ -1,5 +1,6 @@
+import os
 import plot_speedtest
-PLOT_NAME = 'bandwidth.png'
-plot_speedtest.read_data()
 
-plot_speedtest.create_plot(PLOT_NAME)
+HOSTNAME = os.getenv('COMPUTERNAME')
+LOG_FILE = (f'speedtest-{HOSTNAME}.log')
+print (LOG_FILE)
