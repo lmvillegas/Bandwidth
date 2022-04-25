@@ -13,7 +13,7 @@ LOG_FILE = (f'speedtest-{HOSTNAME}.log')
 
 
 def main():
-    plot_file_name = 'bandwidth.png'
+    plot_file_name = 'web/static/images/bandwidth.png'
     create_plot(plot_file_name)
     os.system('open ' + plot_file_name)
 
